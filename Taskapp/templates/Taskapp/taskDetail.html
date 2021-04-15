@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <h2 style="color: darkred">Task Name: <i>{{ task }}</i></h2>
+    <br>
+    <h3>Created on: {{ task.created }}  </h3>
+    <h3>StartTime:  {{ task.startTime }}</h3>
+    <h3>EndTime:    {{ task.endTime }}  </h3>
+    <h3>Project:    {{ task.project }}  </h3>
+    <br>
+    <a href="{% url 'tasks' %}">Go back</a>
+
+</body>
+</html>
