@@ -1,7 +1,7 @@
 **Assumptions:**
 
 1) All the users have 3 common projects: AWS, Heroku, GoogleCloud
-> So users can choose any one project from the dropdown.
+    > So users can choose any one project from the dropdown.
 2) Users have to register with username & password 
 3) The StartTime & EndTime are provided by the user 
 4) The StartTime & EndTime can be set for the same day when the task was created
@@ -23,3 +23,4 @@
 5) Now, we are up and ready to start the server & and use the Web-app
     > python manage.py runserver 
 
+**I have used SQLite as the database**
