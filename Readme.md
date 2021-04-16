@@ -1,9 +1,12 @@
 **Assumptions:**
 
-1) All the users have 3 common projects: AWS, Heroku, GoogleCloud
+1) All the users have 3 common projects named as: AWS, Heroku, GoogleCloud
     > So users can choose any one project from the dropdown.
+
 2) Users have to register with username & password 
+
 3) The StartTime & EndTime are provided by the user 
+
 4) The StartTime & EndTime can be set for the same day when the task was created
 
 **How to configure the project on your Desktop/Laptop** 
