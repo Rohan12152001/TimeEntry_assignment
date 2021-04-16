@@ -2,8 +2,6 @@ from django.urls import path
 from . import views
 from .views import TaskList, TaskDetailView, TaskCreateView, \
                     TaskUpdateView, TaskDeleteView, TaskLoginView, TaskRegisterView
-# TaskDetail, TaskCreate, TaskUpdate, DeleteView,
-# CustomLoginView, RegisterPage, TaskReorder
 from django.contrib.auth.views import LogoutView
 
 urlpatterns = [

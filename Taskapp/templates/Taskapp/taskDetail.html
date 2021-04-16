@@ -6,14 +6,18 @@
 </head>
 <body>
 
-    <h2 style="color: darkred">Task Name: <i>{{ task }}</i></h2>
-    <br>
-    <h3>Created on: {{ task.created }}  </h3>
-    <h3>StartTime:  {{ task.startTime }}</h3>
-    <h3>EndTime:    {{ task.endTime }}  </h3>
-    <h3>Project:    {{ task.project }}  </h3>
-    <br>
-    <a href="{% url 'tasks' %}">Go back</a>
+    <div>
+        <h2 style="color: darkred">Task Name: <i>{{ task }}</i></h2>
+        <br>
+        <div style="border-style: solid;border-width: 2px">
+            <h3>Created on: {{ task.created }}  </h3>
+            <h3>StartTime:  {{ task.startTime }}</h3>
+            <h3>EndTime:    {{ task.endTime }}  </h3>
+            <h3>Project:    {{ task.project }}  </h3>
+        </div>
+        <br>
+        <a href="{% url 'tasks' %}">Go back</a>
+    </div>
 
 </body>
 </html>

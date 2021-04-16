@@ -10,7 +10,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 
-# Imports for Reordering Feature
 from django.views import View
 from django.shortcuts import redirect
 from django.db import transaction
@@ -19,9 +18,6 @@ from django.db import transaction
 from .models import Task
 
 # Create your views here.
-
-# def baseview(request):
-#     return HttpResponse('Rohan sodha')
 
 class TaskLoginView(LoginView):
     template_name = 'Taskapp/taskLogin.html'
@@ -70,10 +66,15 @@ class TaskCreateView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('tasks')
 
     def form_valid(self, form):
-        # print(form.cleaned_data)
-        form.instance.user = self.request.user
-        print(self.request)
-        return super(TaskCreateView, self).form_valid(form)
+        data = form.cleaned_data
+        start = data['startTime']
+        end = data['endTime']
+        if start < end:
+            form.instance.user = self.request.user
+            return super(TaskCreateView, self).form_valid(form)
+        else:
+            return super(TaskCreateView, self).form_invalid(form)
+
 
 class TaskUpdateView(LoginRequiredMixin, UpdateView):
     model = Task
