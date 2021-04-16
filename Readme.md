@@ -1,3 +1,5 @@
+**I have used SQLite as the database**
+
 **Assumptions:**
 
 1) All the users have 3 common projects named as: AWS, Heroku, GoogleCloud
@@ -26,4 +28,3 @@
 5) Now, we are up and ready to start the server & and use the Web-app
     > python manage.py runserver 
 
-**I have used SQLite as the database**
